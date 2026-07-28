@@ -44,12 +44,24 @@ const updateParallax = () => {
   parallaxTarget.style.transform = `translate3d(0, ${offset}px, 0) scale(1.08)`;
 };
 
+const updateLeafParallax = () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const leaves = document.querySelectorAll(".jungle-leaf-wrapper");
+  const scrollY = window.scrollY;
+  leaves.forEach((leaf) => {
+    const speed = parseFloat(leaf.getAttribute("data-speed")) || 0.05;
+    const yOffset = scrollY * speed;
+    leaf.style.transform = `translate3d(0, ${yOffset}px, 0)`;
+  });
+};
+
 const onScroll = () => {
   setHeaderState();
 
   if (!ticking) {
     window.requestAnimationFrame(() => {
       updateParallax();
+      updateLeafParallax();
       ticking = false;
     });
     ticking = true;
@@ -73,6 +85,7 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll", onScroll, { passive: true });
 setHeaderState();
 updateParallax();
+updateLeafParallax();
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
