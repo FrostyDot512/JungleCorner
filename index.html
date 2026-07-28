@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jungle Corner is a vibrant juice restaurant and healthy lifestyle brand serving fresh juices, smoothies, bowls, and tropical cafe energy.">
+  <title>Jungle Corner | Fresh Juice, Good Vibes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="preload" href="assets/images/more-drink.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+
+<body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-leaf"></div>
+    <p>Jungle Corner</p>
+    <span>pressed fresh</span>
+  </div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="Jungle Corner home">
+      <span class="brand-mark">JC</span>
+      <span class="brand-name">Jungle Corner</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" data-nav>
+      <a href="#story">Story</a>
+      <a href="#juices">Juices</a>
+      <a href="#events">Nightlife</a>
+      <a href="#experience">Experience</a>
+      <a href="#why">Why</a>
+      <a href="#contact">Visit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" data-parallax-section>
+      <div class="hero-bg" data-parallax style="background-image: url('assets/images/more-drink.jpg');"></div>
+      <div class="hero-glow"></div>
+      <div class="floating fruit fruit-one"></div>
+      <div class="floating fruit fruit-two"></div>
+      <div class="floating leaf leaf-one"></div>
+      <div class="floating leaf leaf-two"></div>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">Fresh juice bar and tropical cafe</p>
+        <h1>Nature in a glass, energy in the room.</h1>
+        <p class="hero-copy">Cold, colorful blends made with real fruit, clean ingredients, warm hospitality, and the
+          kind of jungle mood that turns a quick stop into a ritual.</p>
+        <div class="hero-tags">
+          <span class="category-tag">Cold-Pressed Juices</span>
+          <span class="category-tag">Organic Smoothie Bowls</span>
+          <span class="category-tag">Artisan Coffee</span>
+          <span class="category-tag">Nightlife Events</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#juices">Explore Juices</a>
+          <a class="btn btn-secondary" href="#contact">Plan a Visit</a>
+        </div>
+      </div>
+
+      <div class="hero-orbit reveal" style="--delay: 160ms">
+        <span>100%</span>
+        <p>fresh fruit, bold color, feel-good flavor</p>
+      </div>
+
+      <a class="scroll-indicator" href="#story" aria-label="Scroll to story">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="story section" id="story">
+      <div class="container story-grid">
+        <div class="layered-media reveal">
+          <img class="media-large" src="assets/images/drink.jpg" alt="Fresh tropical drink at Jungle Corner"
+            loading="lazy" decoding="async">
+          <img class="media-small" src="assets/images/inside.jpg" alt="Warm cafe interior atmosphere" loading="lazy"
+            decoding="async">
+          <div class="texture-card">fresh daily</div>
+        </div>
+        <div class="section-copy reveal" style="--delay: 120ms">
+          <p class="eyebrow">Our Story</p>
+          <h2>A little corner of the jungle, built for better days.</h2>
+          <p>Jungle Corner celebrates fruit at its brightest: ripe mango, pineapple, citrus, mint, berries, ginger, and
+            green botanicals layered into drinks that look beautiful and taste alive.</p>
+          <p>The space is warm, botanical, and easy to love. It is where wellness feels social, premium quality feels
+            approachable, and every cup carries the color of a sunny afternoon.</p>
+          <div class="story-stats">
+            <span><strong>Daily</strong> fresh prep</span>
+            <span><strong>Zero</strong> dull moments</span>
+            <span><strong>Pure</strong> tropical mood</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature section" id="juices">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Signature Juices</p>
+          <h2>Designed like a product drop, pressed like a promise.</h2>
+        </div>
+
+        <div class="juice-showcase">
+          <article class="juice-card reveal" style="--accent: #f8b545;">
+            <div class="juice-light"></div>
+            <span class="juice-number">01</span>
+            <h3>Mango Canopy</h3>
+            <p>Velvety mango, pineapple, orange, lime, and a cooling mint finish.</p>
+            <ul>
+              <li>Mango</li>
+              <li>Pineapple</li>
+              <li>Mint</li>
+            </ul>
+          </article>
+          <article class="juice-card tall reveal" style="--accent: #42c866; --delay: 90ms;">
+            <div class="juice-light"></div>
+            <span class="juice-number">02</span>
+            <h3>Emerald Detox</h3>
+            <p>Cucumber, apple, spinach, lemon, and ginger for a crisp green reset.</p>
+            <ul>
+              <li>Apple</li>
+              <li>Greens</li>
+              <li>Ginger</li>
+            </ul>
+          </article>
+          <article class="juice-card reveal" style="--accent: #ff6b4a; --delay: 180ms;">
+            <div class="juice-light"></div>
+            <span class="juice-number">03</span>
+            <h3>Sunset Passion</h3>
+            <p>Passion fruit, watermelon, strawberry, basil, and citrus sparkle.</p>
+            <ul>
+              <li>Passion</li>
+              <li>Watermelon</li>
+              <li>Basil</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The Experience</p>
+          <h2>Come for the juice. Stay for the atmosphere.</h2>
+        </div>
+      </div>
+      <div class="horizontal-gallery" data-horizontal-gallery>
+        <figure>
+          <img src="assets/images/interior.jpg" alt="Jungle Corner inspired interior" loading="lazy" decoding="async">
+          <figcaption>Botanical corners</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/mojito.jpg" alt="Fresh drink with mint" loading="lazy" decoding="async">
+          <figcaption>Fresh garnish</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/besties-time-out.jpg" alt="Friends sharing a cafe moment" loading="lazy"
+            decoding="async">
+          <figcaption>Good company</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/nice-foods.jpg" alt="Fresh food and drinks" loading="lazy" decoding="async">
+          <figcaption>Colorful plates</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/outside.jpg" alt="Outdoor cafe view" loading="lazy" decoding="async">
+          <figcaption>Golden hour visits</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="nightlife section" id="events">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Live Beats &amp; Nights</p>
+            <h2 class="event-heading">Jungle Corner After Hours</h2>
+          </div>
+          <p class="event-lead">When the sun sets, our garden lights up. Experience high-energy acoustic sets, local DJ sessions, and botanical cocktails in our nightlife oasis.</p>
+        </div>
+
+        <div class="events-grid">
+          <article class="event-card reveal">
+            <div class="event-card-header">
+              <span class="event-badge">Live This Friday</span>
+              <span class="event-date">9:00 PM - Late</span>
+            </div>
+            <div class="event-card-body">
+              <h3>Neon Jungle DJ Session</h3>
+              <p>Get lost in the rhythm. Deep afro-house, tropical beats, and immersive neon visual projections under our botanical canopy.</p>
+            </div>
+            <div class="event-card-footer">
+              <a href="#contact" class="btn btn-primary">Book a Table</a>
+            </div>
+          </article>
+
+          <article class="event-card reveal" style="--delay: 90ms;">
+            <div class="event-card-header">
+              <span class="event-badge">Recurring</span>
+              <span class="event-date">Saturdays | 7:00 PM</span>
+            </div>
+            <div class="event-card-body">
+              <h3>Acoustic Garden Sets</h3>
+              <p>Unwind with intimate live sessions by local singer-songwriters. Ambient lighting, cozy seating, and special nighttime menus.</p>
+            </div>
+            <div class="event-card-footer">
+              <a href="#contact" class="btn btn-secondary">Learn More</a>
+            </div>
+          </article>
+
+          <article class="event-card reveal" style="--delay: 180ms;">
+            <div class="event-card-header">
+              <span class="event-badge">Sold Out</span>
+              <span class="event-date">Monthly | 8:00 PM</span>
+            </div>
+            <div class="event-card-body">
+              <h3>Late Night Jazz Lounge</h3>
+              <p>Smooth double bass, classic brass, and dim candlelight. A refined evening featuring curated tapas and wine pairings.</p>
+            </div>
+            <div class="event-card-footer">
+              <a href="#contact" class="btn btn-secondary">Join Waitlist</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why section" id="why">
+      <div class="container why-layout">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Why Jungle Corner</p>
+          <h2>The pleasure of premium, the ease of healthy.</h2>
+          <p>Every detail is tuned for freshness: the ingredients, the color, the preparation rhythm, and the feeling
+            guests carry out with them.</p>
+        </div>
+        <div class="why-list">
+          <div class="why-item reveal"><span>Fresh ingredients</span><p>Fruit-forward recipes prepared with vivid,
+              clean flavor.</p></div>
+          <div class="why-item reveal" style="--delay: 70ms;"><span>Healthy lifestyle</span><p>Drinks that feel bright,
+              balanced, and genuinely satisfying.</p></div>
+          <div class="why-item reveal" style="--delay: 140ms;"><span>Premium quality</span><p>Thoughtful presentation,
+              beautiful textures, and careful service.</p></div>
+          <div class="why-item reveal" style="--delay: 210ms;"><span>Community energy</span><p>A social corner for
+              friends, wellness dates, and after-work resets.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="insta section" id="instagram">
+      <div class="container">
+        <div class="insta-top reveal">
+          <div>
+            <p class="eyebrow">Instagram Mood</p>
+            <h2>@junglecorner2025 in website form.</h2>
+          </div>
+          <a class="btn btn-secondary" href="https://www.instagram.com/junglecorner2025/" target="_blank"
+            rel="noopener">Follow the freshness</a>
+        </div>
+
+        <div class="story-row reveal" aria-label="Instagram story highlights">
+          <span>Juices</span>
+          <span>Bowls</span>
+          <span>Interior</span>
+          <span>Friends</span>
+          <span>Behind bar</span>
+        </div>
+
+        <div class="masonry">
+          <img src="assets/images/more-drink.jpg" alt="Fresh juice closeup" loading="lazy" decoding="async">
+          <img src="Media/friends.png" alt="Friends at cafe" loading="lazy" decoding="async">
+          <img src="assets/images/dessert.jpg" alt="Dessert and cafe styling" loading="lazy" decoding="async">
+          <img src="assets/images/inside2.jpg" alt="Cafe interior lighting" loading="lazy" decoding="async">
+          <img src="assets/images/lunch.jpg" alt="Food and drink spread" loading="lazy" decoding="async">
+          <img src="Media/fun.png" alt="Lifestyle cafe moment" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section" id="testimonials">
+      <div class="testimonial-bg" style="background-image: url('assets/images/nice-view-and-food.jpg');"></div>
+      <div class="container testimonial-shell reveal">
+        <p class="eyebrow">Guest Notes</p>
+        <div class="testimonial-slider" data-testimonial-slider>
+          <article class="testimonial active">
+            <span>"</span>
+            <p>The drinks are bright, beautiful, and made with care. It feels like a little escape every time.</p>
+            <strong>Amina K.</strong>
+          </article>
+          <article class="testimonial">
+            <span>"</span>
+            <p>Fresh ingredients, warm people, and a space that makes healthy choices feel exciting.</p>
+            <strong>Daniel M.</strong>
+          </article>
+          <article class="testimonial">
+            <span>"</span>
+            <p>Exactly the kind of cafe you want for a catch-up: colorful, calm, premium, and full of life.</p>
+            <strong>Leah N.</strong>
+          </article>
+        </div>
+        <div class="slider-controls">
+          <button type="button" data-testimonial-prev aria-label="Previous testimonial">Prev</button>
+          <button type="button" data-testimonial-next aria-label="Next testimonial">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Visit The Corner</p>
+          <h2>Your next fresh ritual starts here.</h2>
+          <div class="contact-details">
+            <a href="tel:+256700000000"><span>Phone</span> +256 700 000 000</a>
+            <a href="https://www.instagram.com/junglecorner2025/" target="_blank" rel="noopener"><span>Instagram</span>
+              @junglecorner2025</a>
+            <p><span>Hours</span> Mon - Sun: 8:00 AM - 10:00 PM</p>
+            <p><span>Location</span> Google Maps pin placeholder</p>
+          </div>
+          <div class="map-placeholder">
+            <span>Google Maps</span>
+            <p>Jungle Corner location embed placeholder</p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" style="--delay: 120ms" data-contact-form>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" autocomplete="tel" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Ask about juices, group visits, or catering..." required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          <p class="form-status" data-form-status></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#home" aria-label="Jungle Corner home">
+          <span class="brand-mark">JC</span>
+          <span class="brand-name">Jungle Corner</span>
+        </a>
+        <p>Fresh juice, real fruit, tropical calm, and premium everyday wellness.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#story">Story</a>
+        <a href="#juices">Juices</a>
+        <a href="#events">Nightlife</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Visit</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/junglecorner2025/" target="_blank" rel="noopener">Instagram</a>
+        <a href="tel:+256700000000">Call</a>
+      </div>
+    </div>
+    <p class="copyright">&copy; <span data-year></span> Jungle Corner. Freshly made.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
