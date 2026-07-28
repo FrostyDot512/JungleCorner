@@ -1,17 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lilita+One&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Manrope:wght@400;500;600&display=swap");
 
 :root {
   /* Brand Color Palette Variables */
-  --color-primary-orange: #F18928;  /* Brand logo color, main buttons, primary accents */
-  --color-jungle-dark:    #183B28;  /* Header, navigation bar, footer background */
+  --color-primary-orange: #F4B63A;  /* Mango Yellow */
+  --color-jungle-dark:    #2E6B2D;  /* Dark Green */
   --color-jungle-leaf:    #398B53;  /* Hover states, subheadings, icons */
   --color-warm-sand:      #EAC393;  /* Hero background, soft card container surfaces */
   --color-earth-brown:    #83471A;  /* Category tags, borders, subtle divider lines */
   --color-electric-green: #00FF1A;  /* Live event badges, high-energy banners */
   --color-dark-event:     #111111;  /* Event & nightlife section background */
-  --color-bg-light:       #FAF7F2;  /* Base page background */
-  --color-text-dark:      #1A1A1A;  /* Body text on light backgrounds */
+  --color-bg-light:       #FFF8EE;  /* Warm White */
+  --color-text-dark:      #2A2A2A;  /* Charcoal */
   --color-text-light:     #FFFFFF;  /* Body text on dark backgrounds */
+
+  /* Typography System variables */
+  --font-primary:         'Anton', sans-serif;
+  --font-secondary:       'Alfa Slab One', serif;
+  --font-body:            'Manrope', sans-serif;
 
   /* Layout & Animation variables */
   --shadow: 0 15px 40px rgba(24, 59, 40, 0.06);
@@ -33,7 +38,8 @@ body {
   margin: 0;
   color: var(--color-text-dark);
   background-color: var(--color-bg-light);
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-family: var(--font-body);
+  font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -75,34 +81,44 @@ button {
 .eyebrow {
   margin: 0 0 16px;
   color: var(--color-jungle-leaf);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 h1,
-h2,
+h2 {
+  margin: 0;
+  font-family: var(--font-primary);
+  line-height: 1.05;
+  color: var(--color-jungle-dark);
+}
+
 h3 {
   margin: 0;
-  font-family: "Fraunces", Georgia, serif;
-  line-height: 0.98;
-  letter-spacing: 0;
+  font-family: var(--font-secondary);
+  line-height: 1.15;
   color: var(--color-jungle-dark);
 }
 
 h1 {
   max-width: 880px;
-  font-size: clamp(3.5rem, 9vw, 9.2rem);
+  font-size: clamp(42px, 8vw, 96px);
+  letter-spacing: 1px;
 }
 
 h2 {
   max-width: 760px;
-  font-size: clamp(2.5rem, 6vw, 6.2rem);
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-size: clamp(22px, 3vw, 28px);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 p {
@@ -119,9 +135,9 @@ p {
   min-height: 54px;
   padding: 0 32px;
   border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  letter-spacing: 1px;
   overflow: hidden;
   text-transform: uppercase;
   transition: all 300ms var(--ease);
@@ -129,7 +145,7 @@ p {
 
 .btn:hover,
 .btn:focus-visible {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.03);
 }
 
 .btn-primary {
@@ -174,9 +190,18 @@ p {
 .loader p {
   position: relative;
   z-index: 1;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-primary);
   font-size: clamp(2.5rem, 8vw, 7rem);
   font-weight: 800;
+  animation: loaderText 1200ms var(--ease) both;
+}
+
+.loader-logo {
+  position: relative;
+  z-index: 1;
+  width: min(65vw, 290px);
+  height: auto;
+  object-fit: contain;
   animation: loaderText 1200ms var(--ease) both;
 }
 
@@ -251,14 +276,22 @@ p {
   border-radius: 50%;
   color: var(--color-jungle-dark);
   background-color: var(--color-primary-orange);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-primary);
   font-weight: 800;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+.brand-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .brand-name {
-  font-size: 0.9rem;
-  letter-spacing: 0.14em;
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   color: var(--color-primary-orange);
 }
@@ -267,9 +300,9 @@ p {
 .main-nav {
   display: flex;
   gap: clamp(16px, 3vw, 36px);
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
@@ -420,7 +453,7 @@ p {
 
 .hero-orbit span {
   display: block;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-primary);
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 1;
   color: var(--color-earth-brown);
@@ -591,7 +624,7 @@ p {
 .story-stats strong {
   display: block;
   color: var(--color-jungle-leaf);
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-primary);
   font-size: 1.5rem;
 }
 
@@ -680,6 +713,11 @@ p {
 .juice-card ul {
   position: relative;
   z-index: 1;
+}
+
+.juice-card h3 {
+  font-size: clamp(22px, 3.5vw, 30px);
+  text-shadow: 1px 1px 2px rgba(244, 182, 58, 0.4);
 }
 
 .juice-card p {
@@ -822,9 +860,9 @@ p {
 .event-badge {
   background-color: var(--color-electric-green);
   color: #000000;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   padding: 6px 12px;
   border-radius: 4px;
@@ -832,17 +870,18 @@ p {
 
 .event-date {
   color: var(--color-primary-orange);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 .event-card-body h3 {
   color: var(--color-primary-orange);
   margin-bottom: 12px;
-  font-size: 1.8rem;
-  line-height: 1.1;
+  font-size: clamp(22px, 3.5vw, 30px);
+  line-height: 1.15;
+  text-shadow: 1px 1px 2px rgba(244, 182, 58, 0.4);
 }
 
 .event-card-body p {
@@ -1040,22 +1079,26 @@ p {
   display: block;
   height: 64px;
   color: var(--color-primary-orange);
-  font-family: "Fraunces", Georgia, serif;
-  font-size: 8rem;
+  font-family: var(--font-secondary);
+  font-size: 6rem; /* Scaled down slightly to fit Alfa Slab One proportions */
   line-height: 0.8;
 }
 
 .testimonial p {
   max-width: 620px;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(1.8rem, 4vw, 3.4rem);
-  line-height: 1.05;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  line-height: 1.4;
 }
 
 .testimonial strong {
   display: block;
   margin-top: 22px;
   color: var(--color-warm-sand);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .slider-controls {
@@ -1122,7 +1165,7 @@ p {
 .map-placeholder span {
   display: block;
   margin-bottom: 8px;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-primary);
   font-size: 2rem;
 }
 
@@ -1211,6 +1254,9 @@ p {
 }
 
 .site-footer a {
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
   color: var(--color-warm-sand);
   transition: color 220ms var(--ease);
 }
@@ -1383,6 +1429,10 @@ p {
     height: 46px;
   }
 
+  .brand-logo {
+    height: 42px;
+  }
+
   .brand-name {
     max-width: 130px;
     font-size: 0.75rem;
@@ -1500,12 +1550,13 @@ p {
 
 /* Retro 1970s Display Typeface Style */
 .retro-menu-title {
-  font-family: 'Lilita One', 'Titan One', 'Arial Rounded MT Bold', sans-serif;
-  font-weight: 400; /* Lilita One is naturally ultra-bold */
+  font-family: var(--font-secondary);
+  font-weight: 400; /* Alfa Slab One is naturally bold */
   text-transform: uppercase;
   letter-spacing: -0.02em; 
   line-height: 1.1;
   color: var(--color-earth-brown, #83471A);
+  text-shadow: 1px 1px 2px rgba(244, 182, 58, 0.4);
 }
 
 /* ==========================================================================
