@@ -17,6 +17,9 @@
   --font-primary:         'Anton', sans-serif;
   --font-secondary:       'Alfa Slab One', serif;
   --font-body:            'Manrope', sans-serif;
+  --font-headings:        'Shrikhand', serif;
+  --font-chunky:          'Bagel Fat One', cursive;
+  --font-loader:          'Oi', cursive;
 
   /* Layout & Animation variables */
   --shadow: 0 15px 40px rgba(24, 59, 40, 0.06);
@@ -90,15 +93,17 @@ button {
 h1,
 h2 {
   margin: 0;
-  font-family: var(--font-primary);
-  line-height: 1.05;
+  font-family: var(--font-headings);
+  font-weight: 400;
+  line-height: 1.1;
   color: var(--color-jungle-dark);
 }
 
 h3 {
   margin: 0;
-  font-family: var(--font-secondary);
-  line-height: 1.15;
+  font-family: var(--font-headings);
+  font-weight: 400;
+  line-height: 1.2;
   color: var(--color-jungle-dark);
 }
 
@@ -196,12 +201,18 @@ p {
   animation: loaderText 1200ms var(--ease) both;
 }
 
-.loader-logo {
+.loader-logo-text {
   position: relative;
   z-index: 1;
-  width: min(65vw, 290px);
-  height: auto;
-  object-fit: contain;
+  font-family: var(--font-loader);
+  font-size: clamp(2.2rem, 9vw, 5.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-primary-orange);
+  text-align: center;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-shadow: 4px 4px 0px var(--color-earth-brown);
   animation: loaderText 1200ms var(--ease) both;
 }
 
@@ -420,9 +431,10 @@ p {
   padding: 6px 14px;
   background-color: var(--color-earth-brown);
   color: #FFFFFF;
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  font-family: var(--font-headings);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   border-radius: 4px;
 }
@@ -724,7 +736,12 @@ p {
   max-width: 330px;
   margin: 16px 0 24px;
   color: var(--color-text-dark);
-  opacity: 0.8;
+  font-family: var(--font-chunky);
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  opacity: 0.9;
 }
 
 .juice-card ul {
@@ -886,9 +903,12 @@ p {
 
 .event-card-body p {
   color: var(--color-text-light);
-  opacity: 0.85;
-  font-size: 0.98rem;
+  font-family: var(--font-chunky);
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+  font-weight: 400;
   line-height: 1.5;
+  letter-spacing: 0.03em;
+  opacity: 0.9;
   margin-bottom: 24px;
 }
 
@@ -949,9 +969,14 @@ p {
 }
 
 .why-item p {
+  font-family: var(--font-chunky);
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
   margin-top: 8px;
   color: var(--color-text-dark);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* Instagram Mood Section */
@@ -1550,8 +1575,8 @@ p {
 
 /* Retro 1970s Display Typeface Style */
 .retro-menu-title {
-  font-family: var(--font-secondary);
-  font-weight: 400; /* Alfa Slab One is naturally bold */
+  font-family: var(--font-headings);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.02em; 
   line-height: 1.1;
