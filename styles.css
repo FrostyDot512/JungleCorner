@@ -189,7 +189,7 @@ p {
   place-items: center;
   color: var(--color-warm-sand);
   background: var(--color-jungle-dark);
-  transition: opacity 700ms var(--ease), visibility 700ms var(--ease);
+  transition: opacity 500ms var(--ease), visibility 500ms var(--ease);
 }
 
 .loader p {
@@ -201,19 +201,64 @@ p {
   animation: loaderText 1200ms var(--ease) both;
 }
 
-.loader-logo-text {
+.juice-loader-container {
   position: relative;
   z-index: 1;
-  font-family: var(--font-loader);
-  font-size: clamp(2.2rem, 9vw, 5.5rem);
-  font-weight: 400;
-  text-transform: uppercase;
-  color: var(--color-primary-orange);
-  text-align: center;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  text-shadow: 4px 4px 0px var(--color-earth-brown);
-  animation: loaderText 1200ms var(--ease) both;
+  width: min(90vw, 850px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.juice-loader-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.outline-text {
+  fill: none;
+  stroke: var(--color-primary-orange);
+  stroke-width: 2.2px;
+  animation: fade-outline 1.5s forwards;
+  animation-delay: 0.3s;
+}
+
+.liquid-container {
+  transform: translateY(240px);
+  animation: wave-rise 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.3s;
+}
+
+.liquid-wave {
+  animation: wave-move 2.5s linear infinite;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes wave-rise {
+  0% {
+    transform: translateY(240px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fade-outline {
+  0%, 85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .loader span {

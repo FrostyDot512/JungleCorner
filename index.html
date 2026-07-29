@@ -20,7 +20,30 @@
 <body>
   <div class="loader" aria-hidden="true">
     <div class="loader-leaf"></div>
-    <div class="loader-logo-text">Jungle Corner</div>
+    <div class="juice-loader-container">
+      <svg class="juice-loader-svg" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="juice-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F9B233" />
+            <stop offset="50%" stop-color="#F28C28" />
+            <stop offset="100%" stop-color="#D96A00" />
+          </linearGradient>
+          <mask id="text-mask">
+            <text x="50%" y="50%" dy="0.32em" text-anchor="middle" font-family="'Oi', cursive" font-size="88px" fill="white">Jungle Corner</text>
+          </mask>
+        </defs>
+        
+        <!-- Outline Text (Behind) -->
+        <text class="outline-text" x="50%" y="50%" dy="0.32em" text-anchor="middle" font-family="'Oi', cursive" font-size="88px">Jungle Corner</text>
+        
+        <!-- Liquid Fill (Masked) -->
+        <g mask="url(#text-mask)">
+          <g class="liquid-container">
+            <path class="liquid-wave" d="M 0 50 Q 100 35 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 T 1400 50 T 1600 50 L 1600 450 L 0 450 Z" fill="url(#juice-grad)" />
+          </g>
+        </g>
+      </svg>
+    </div>
     <span>pressed fresh</span>
   </div>
 
